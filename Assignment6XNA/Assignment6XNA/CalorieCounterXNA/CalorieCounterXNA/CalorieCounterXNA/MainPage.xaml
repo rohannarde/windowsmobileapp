@@ -1,0 +1,66 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="CalorieCounterXNA.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Assignment 6" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Calorie Counter" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="66" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Canvas Height="88" HorizontalAlignment="Left" Margin="7,8,0,0" Name="canvas1" VerticalAlignment="Top" Width="443" Background="#FF8C0000">
+                <TextBlock Canvas.Left="41" Canvas.Top="19" Height="49" Name="totalCaloriesTextBlock" Text="Total Calories" Width="186" FontSize="30" />
+                <TextBox Canvas.Left="246" Canvas.Top="6" Height="74" Name="totalCaloriesTextBox" Text="0" Width="189" IsEnabled="False" />
+            </Canvas>
+            <Button Content="Add" Height="72" HorizontalAlignment="Left" Margin="9,120,0,0" Name="addButton" VerticalAlignment="Top" Width="130" Click="AddButton_Click" />
+            <Button Content="Clear" Height="72" HorizontalAlignment="Right" Margin="0,120,14,0" Name="clearButton" VerticalAlignment="Top" Width="130" Click="ClearButton_Click" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="160,120,0,0" Name="scratchPadTextBox" Text="0" VerticalAlignment="Top" Width="125" InputScope ="Digits" />
+            <Button Content="25" Height="72" HorizontalAlignment="Left" Margin="12,216,0,0" Name="twentyFiveCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="50" Height="72" HorizontalAlignment="Right" Margin="0,216,169,0" Name="fiftyCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="100" Height="72" HorizontalAlignment="Right" Margin="0,216,14,0" Name="hundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="200" Height="72" HorizontalAlignment="Left" Margin="12,294,0,0" Name="twoHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="300" Height="72" HorizontalAlignment="Left" Margin="160,294,0,0" Name="threeHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="400" Height="72" HorizontalAlignment="Right" Margin="0,294,14,0" Name="fourHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="500" Height="72" HorizontalAlignment="Left" Margin="12,372,0,0" Name="fiveHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="600" Height="72" HorizontalAlignment="Left" Margin="160,372,0,0" Name="sixHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="700" Height="72" HorizontalAlignment="Right" Margin="0,372,14,0" Name="sevenHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="800" Height="72" HorizontalAlignment="Left" Margin="12,450,0,0" Name="eightHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="900" Height="72" HorizontalAlignment="Right" Margin="0,450,169,0" Name="nineHundredCaloriesButton" VerticalAlignment="Top" Width="127" Click="CalorieButton_Click" />
+            <Button Content="1000" Height="72" HorizontalAlignment="Right" Margin="0,0,14,93" Name="oneThousandCaloriesButton" VerticalAlignment="Bottom" Width="127" Click="CalorieButton_Click" />
+            <Button Content="Calorie Advice" Height="72" HorizontalAlignment="Left" Margin="115,537,0,0" Name="CalorieXNA" VerticalAlignment="Top" Width="220" Click="CalorieXNA_Click" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
